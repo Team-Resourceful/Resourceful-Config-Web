@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Config</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/loader.css">
+    <link rel="stylesheet" href="styles/config.css">
+    <link rel="stylesheet" href="styles/settings.css">
+    <link rel="stylesheet" href="styles/elements.css">
+</head>
+<base>
+<body>
+    <div id="categories">
+        <div id="user">
+            <div id="user-icon">
+                <img id="user-icon-img" src="assets/lucide/help-circle.svg" alt="User Profile Picture">
+            </div>
+            <div id="user-data">
+                <h3 id="username">Loading...</h3>
+                <div id="logout"><img src="assets/lucide/log-out.svg" alt="Logout Button"/><span>Logout</span></div>
+            </div>
+        </div>
+        <div>
+            <div id="category-list-header">
+                <p id="selected-category">Selected Category</p>
+            </div>
+            <div id="config-categories">
+                <ul id="category-list"></ul>
+            </div>
+            <div id="back-done-btn">
+                <h3 id="back-btn">Back</h3>
+                <h3 id="save-btn">Save</h3>
+            </div>
+        </div>
+        <div id="message">
+            <h3 id="created-message">Created with <span style="color: #EE4B2B">❤</span> from<br>Team Resourceful</h3>
+        </div>
+    </div>
+    <div id="entry-container">
+        <div id="entry-info">
+            <div>
+                <h1 id="config-title"></h1>
+                <p id="config-description"></p>
+            </div>
+            <div id="entry-info-buttons"></div>
+        </div>
+        <div id="items" class="loading">
+            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+        </div>
+    </div>
+</body>
+<script src="scripts/utils.js"></script>
+<script src="scripts/api.js"></script>
+<script src="scripts/login/logout.js"></script>
+<script src="scripts/config/config-history.js"></script>
+<script src="scripts/config/loader.js"></script>
+<script src="scripts/config/saver.js"></script>
+<script src="scripts/config/config-info.js"></script>
+</html>

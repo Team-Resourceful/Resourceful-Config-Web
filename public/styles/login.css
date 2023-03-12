@@ -1,0 +1,103 @@
+body {
+    background-color: var(--background-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    width: clamp(150px, 50%, 750px);
+    aspect-ratio: 4/3;
+    background-color: var(--container-color);
+    border-radius: 15px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    row-gap: 20px;
+}
+
+#splash {
+    background-color: var(--highlight-color);
+    border-radius: 15px 0 0 15px;
+}
+
+#login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+
+    color: var(--text-title-color);
+}
+
+#login-container > div {
+    padding: 30px;
+}
+
+#server-domain, #server-password, #server-login {
+    padding: 10px;
+    position: relative;
+    left: 0;
+    outline: none;
+    border: transparent;
+    background-color: var(--button-color);
+    font-size: 16px;
+
+    border-radius: 5px;
+
+    width: calc(100% - 80px);
+
+    height: 14px;
+
+    font-family: 'JetBrains Mono', monospace;
+
+    color: var(--text-title-color);
+
+    margin-bottom: 10px;
+}
+
+#show-password {
+    position: absolute;
+
+    background-image: url("../assets/lucide/eye.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 24px;
+    width: 24px;
+    padding: 5px;
+
+    background-color: var(--button-color);
+
+    margin-left: -36px;
+
+    border-radius: 5px;
+}
+
+#show-password:hover {
+    cursor: pointer;
+}
+
+#show-password.open {
+    background-image: url("../assets/lucide/eye-off.svg");
+}
+
+#server-login {
+    margin-top: 40px;
+
+    width: calc(100% - 60px);
+    height: initial;
+
+    background-color: var(--highlight-color);
+}
+
+#server-login:hover {
+    cursor: pointer;
+}
+
+#login-container > div > p {
+    font-size: small;
+}

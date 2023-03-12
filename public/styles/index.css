@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;300;400;500;700&display=swap');
+
+:root {
+    --background-color: #131517;
+    --container-color: #1A1C20;
+
+    --accent-color: #27282C;
+
+    --text-title-color: #FAF9F6;
+    --text-paragraph-color: #727478;
+
+    --button-color: #27282C;
+    --button-transparent-color: rgba(39, 40, 44, 0.5);
+    --button-hover-color: #35373B;
+
+    --highlight-color: #EF5552;
+    --highlight-hover-color: #F56A67;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+
+    height: 100vh;
+
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.no-drag {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.no-link-color {
+    color: inherit;
+}

@@ -1,0 +1,54 @@
+body {
+    background-color: var(--background-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    width: clamp(150px, 50%, 750px);
+    aspect-ratio: 4/3;
+    background-color: var(--container-color);
+    border-radius: 15px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    row-gap: 20px;
+}
+
+#splash {
+    background-color: var(--highlight-color);
+    border-radius: 15px 0 0 15px;
+}
+
+#login-container {
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+
+    color: var(--text-title-color);
+}
+
+.btn {
+    background-color: var(--highlight-color);
+    border-radius: 5px;
+
+    padding: 10px 5px;
+
+    width: 75%;
+
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+
+    color: var(--text-title-color);
+
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: var(--highlight-hover-color);
+}

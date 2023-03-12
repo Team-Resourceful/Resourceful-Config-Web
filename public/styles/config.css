@@ -1,0 +1,294 @@
+body {
+    display: grid;
+    column-count: 2;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    width: calc(100% - 20%);
+
+    grid-template-columns: max(25%, 300px) calc(100% - max(25%, 300px));
+
+    background-color: var(--background-color);
+}
+
+#entry-container {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 90px 90%;
+    grid-row-gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    height: calc(100vh - 4em);
+}
+
+#entry-info {
+    background-color: var(--container-color);
+    width: calc(100% - 4em);
+    padding: 1rem;
+    margin: 0 0.5em 0 0.5em;
+
+    border-radius: 15px;
+
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+
+#entry-info > div {
+    height: 100%;
+}
+
+#entry-info > div > h1 {
+    margin: 0;
+    color: var(--text-title-color);
+}
+
+#entry-info > div > p {
+    margin: 0;
+    color: var(--text-paragraph-color);
+}
+
+#entry-info-buttons {
+    display: flex;
+    flex-direction: row-reverse;
+
+    gap: 10px;
+
+    align-items: center;
+}
+
+#entry-info-buttons  > a {
+    background-color: var(--button-color);
+    width: 24px;
+    height: 24px;
+    padding: 6px;
+
+    border-radius: 5px;
+}
+
+#entry-info-buttons > a:hover {
+    cursor: pointer;
+    background-color: var(--button-hover-color);
+}
+
+#items {
+    width: 100%;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#categories {
+    width: calc(100% - 4em);
+    height: calc(100vh - 4em);
+    margin: 1em 0.5em 1em 1em;
+    padding: 1rem;
+    border-radius: 15px;
+    background-color: var(--container-color);
+
+    display: grid;
+    grid-template-rows: 90px auto calc(2em + 20px);
+}
+
+#categories > div:not(:last-child) {
+    border-bottom: 1px solid #2A2C30;
+}
+
+#category-list-header {
+    height: 45px;
+    padding-top: 25px;
+}
+
+#category-list-header > h3 {
+    padding-left: 10px;
+    color: rgba(250, 249, 246, 0.8);
+}
+
+#selected-category {
+    --selected-category-image: url("../assets/lucide/box.svg");
+
+    display: flex;
+    padding-left: 15px;
+    height: 20px;
+    align-items: center;
+    color: var(--text-title-color);
+    margin: 0 0 0 2px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    background-color: var(--button-color);
+    padding-bottom: 7px;
+    padding-top: 10px;
+    border-radius: 10px;
+}
+
+#selected-category::before {
+    content: var(--selected-category-image);
+    padding-right: 10px;
+}
+
+#config-categories {
+    width: 100%;
+    height: calc(100% - 120px);
+    overflow-y: auto;
+}
+
+#category-list {
+    list-style-type: none;
+    padding-left: 20px;
+    padding-bottom: 40px;
+
+    margin-right: 10px;
+
+    height: 0; /* This is the fix, idk why but it is */
+}
+
+#category-list > li {
+    border-left: 2px solid #3A3C40;
+    padding-left: 20px;
+    width: calc(100% - 22px);
+    height: 2.5em;
+    color: var(--text-paragraph-color);
+}
+
+#category-list > li > span {
+    display: block;
+    padding: 7px 10px;
+    font-size: 15px;
+    font-weight: 400;
+    width: calc(100% - 20px);
+}
+
+#category-list > li > span:hover {
+    cursor: pointer;
+    background-color: #35373b;
+    border-radius: 5px;
+}
+
+#category-list:last-child li:last-child {
+    height: 1em;
+}
+
+#category-list > li:before {
+    content: "";
+    display: block;
+    border-left: 2px solid #35373b;
+    border-bottom: 2px solid #35373b;
+    border-bottom-left-radius: 10px;
+    width: 15px;
+    height: 20px;
+    margin-left: -22px;
+    margin-bottom: -16px;
+}
+
+#created-message {
+    font-weight: 400;
+    font-size: 16px;
+    padding: 0 20px;
+    margin: 10px 0 0;
+
+    color: var(--text-paragraph-color);
+}
+
+#categories > div {
+    width: 100%
+}
+
+#user {
+    color: rgba(250, 249, 246, 0.8);
+
+    display: flex;
+}
+
+#user-data {
+    width: calc(100% - 1rem);
+    padding-left: 1rem;
+}
+
+#user-data > div {
+    display: flex;
+
+    width: 120px;
+    height: 30px;
+
+    background-color: var(--button-color);
+    border-radius: 5px;
+
+    color: white;
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    align-items: center;
+}
+
+#user-data > div > span {
+    margin-left: 15px;
+}
+
+#user-data > div:hover {
+    cursor: pointer;
+    background-color: var(--button-hover-color);
+}
+
+#user > div > h3 {
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+#user-icon {
+    height: calc(100% - 1rem);
+    aspect-ratio: 1/1;
+}
+
+#user-icon > img {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+
+#back-done-btn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+
+    margin-top: 5px;
+}
+
+#back-done-btn > h3 {
+    background-color: var(--button-color);
+    border-radius: 10px;
+    padding: 5px 15px;
+    color: var(--text-title-color);
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+#back-done-btn > h3:hover {
+    cursor: pointer;
+    background-color: var(--button-hover-color);
+}
+
+#back-done-btn > h3:first-child:before {
+    display: inline-block;
+    content: url("../assets/lucide/arrow-left.svg");
+    padding-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+#back-done-btn > h3:last-child:after {
+    display: inline-block;
+    content: url("../assets/lucide/save.svg");
+    padding-left: 10px;
+    width: 24px;
+    height: 24px;
+}

@@ -1,0 +1,121 @@
+body {
+    padding-left: 10%;
+    padding-right: 10%;
+
+    width: calc(100% - 20%);
+
+    background-color: var(--background-color);
+}
+
+#info {
+    display: flex;
+
+    margin-top: 20px;
+    padding: 20px;
+    width: calc(100% - 40px);
+    height: 150px;
+    background-color: var(--container-color);
+    border-radius: 15px;
+
+    color: var(--text-paragraph-color);
+}
+
+#search {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--container-color);
+    border-radius: 15px;
+    padding-bottom: 30px;
+}
+
+#search-input {
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    border: none;
+    outline: none;
+    background-color: var(--accent-color);
+    border-radius: 15px;
+    padding: 10px;
+    color: var(--text-paragraph-color);
+}
+
+#search-label {
+    padding-top: 5px;
+    color: var(--text-paragraph-color);
+    float: right;
+}
+
+#selected-icon {
+    height: calc(100% - 20px);
+    aspect-ratio: 1/1;
+    padding: 10px;
+    background-color: var(--accent-color);
+    border-radius: 15px;
+
+    margin-right: 20px;
+}
+
+#icon-id-container {
+    display: flex;
+}
+
+#icon-title {
+    font-size: 30px;
+    color: var(--text-title-color);
+}
+
+#icon-id {
+    color: var(--text-paragraph-color);
+    height: 20px;
+    font-size: 20px;
+    background-color: var(--accent-color);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#copy {
+    height: 20px;
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--button-color);
+}
+
+#copy:hover {
+    cursor: pointer;
+    background-color: var(--button-hover-color);
+}
+
+#icons {
+    display: grid;
+
+    grid-template-columns: repeat(10, calc((100% - 180px) / 10));
+
+    grid-gap: 20px;
+
+    padding: 20px;
+
+    width: calc(100% - 40px);
+
+    background-color: var(--container-color);
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.icon {
+    width: calc(100% - 20px);
+
+    aspect-ratio: 1/1;
+
+    padding: 10px;
+
+    border-radius: 15px;
+
+    background-color: var(--button-color);
+}
+
+.icon:hover {
+    cursor: pointer;
+    background-color: var(--button-hover-color);
+}
