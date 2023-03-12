@@ -109,7 +109,7 @@ function callConfigServer(path, callback) {
 }
 
 function createLocalAwareUrl(server, path) {
-    const start = path.split(":")[0];
+    const start = server.split(":")[0];
     if (start === "localhost" || start === "127.0.0.1") {
         // noinspection HttpUrlsUsage
         return `http://${server}/${path}`;
