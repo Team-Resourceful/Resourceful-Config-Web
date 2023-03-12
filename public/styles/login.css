@@ -101,3 +101,24 @@ body {
 #login-container > div > p {
     font-size: small;
 }
+
+@media screen and (max-width: 1300px) {
+    #container {
+        grid-template-columns: 1fr;
+    }
+    #splash {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #container {
+        width: 80%;
+    }
+}
