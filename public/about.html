@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/animated-links.css">
+</head>
+<body>
+    <div class="container">
+        <h1>About</h1>
+        <p>Welcome to the Resourceful Config Web about page, Resourceful Config Web is a web interface made by Team Resourceful for Resourceful Config and more, more information about the site can be found below.</p>
+        <h2>FAQ</h2>
+        <h5>What is Resourceful Config Web?</h5>
+        <p>Resourceful Config Web is a web interface for the mod Resourceful Config, it allows for the ability to edit configs in the web rather than in-game on in file, it's very useful for server admins and less experienced persons who run servers.</p>
+        <h5>How secure is this?</h5>
+        <p>We try to implement the best security practices, but it is as secure as the password as you use on your servers, we suggest using a hashed custom password for allowed users.</p>
+        <p>On our servers we use your microsoft account information and token for a few seconds and take the information we need and put it into a JWT and then discard all other information. We try to keep information low so all that is used is your mc uuid and username, we also only allow this token to be used for up to 2 hours to make our end as secure as possible without it being too annoying.</p>
+        <p>Additionally when you log out your current token is revoked for all future use and requires a new login.</p>
+        <h5>What config mods does this support?</h5>
+        <p>As of right now we only support Resourceful Config, but we would love to support more we just require 2 things, the ability to get all configs used by the mod and be able to look them up via an identifier and have an easy way to save and convert to web types.</p>
+        <h2>Privacy</h2>
+        <h5>What information to we collect?</h5>
+        <p>We collect only 2 pieces of personal information:</p>
+        <ul>
+            <li>Minecraft UUID — This is used by us to pass on to the server you are connecting to verify who you are and provide the services.</li>
+            <li>Minecraft Username — This is used to display in the web interface this is also sent to the server but can be found using your uuid anyway.</li>
+        </ul>
+        <p>All information above is not stored unless you are logging out which then the uuid is then stored in a database to allow for the revoking part of our log-out system, this information will be periodically cleared out as it is not used for anything other than checking if a token was revoked.</p>
+        <h5>Data Requests</h5>
+        <p>If you would like to know if we have any of your log-outs stored in the database you may request that information from us by contact using via our Discord or email, and then we will provide a way to verify who you are and then after verification is proven we will give you the requested information and delete it if required by you.</p>
+        <h5>Third Parties</h5>
+        <p>While what is listed above is our own policy we also use third parties, and they have their own policy, below is our third parties and their associated privacy policies.</p>
+        <ul>
+            <li>Cloudflare — <a href="https://cloudflare.com/privacypolicy/">https://cloudflare.com/privacypolicy/</a></li>
+        </ul>
+        <h5>Contact</h5>
+        <p>You can find us on Discord at <a href="https://discord.gg/resourcefulbees">discord.gg/resourcefulbees</a></p>
+        <p>You may also email us at <a href="mailto:privacy@resourcefulbees.com">privacy@resourcefulbees.com</a></p>
+    </div>
+</body>
+</html>
