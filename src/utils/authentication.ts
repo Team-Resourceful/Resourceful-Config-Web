@@ -36,10 +36,10 @@ export class Authentication {
                         (err, decoded) => {
                             if (decoded) {
                                 const token = decoded as JwtPayload
-                                Authentication.database.query("SELECT `uuid`, `expire` FROM `revoked` WHERE `uuid` = ?, `expire` = ?",
+                                Authentication.database.query("select `uuid`, `expire` from `revoked` where `uuid` = ? and `expire` = ?",
                                     [token.sub, token.exp])
                                     .then((results) => {
-                                        if (results) {
+                                        if (results && results.length > 0) {
                                             reject({
                                                 status: 403,
                                                 message: "Token has been revoked"
