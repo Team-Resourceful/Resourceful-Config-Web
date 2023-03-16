@@ -100,10 +100,20 @@ function callConfigServer(path, callback) {
         } else if (response.status === 400) {
             callback("Bad Request, error maybe have occurred, please try again layer.", null);
         }else {
-            callback("An error occurred while connecting to the server, please try again later.", null);
+            const isSafari = window.safari !== undefined;
+            if (isSafari) {
+                callback("An error occurred while connecting to the server, please try again later.<br>It may be that your browser is not supported.", null);
+            } else {
+                callback("An error occurred while connecting to the server, please try again later.", null);
+            }
         }
     }).catch((error) => {
-        callback("An error occurred while connecting to the server, please try again later.", null);
+        const isSafari = window.safari !== undefined;
+        if (isSafari) {
+            callback("An error occurred while connecting to the server, please try again later.<br>It may be that your browser is not supported.", null);
+        } else {
+            callback("An error occurred while connecting to the server, please try again later.", null);
+        }
         console.error(error);
     });
 }
