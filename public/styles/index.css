@@ -15,6 +15,10 @@
 
     --highlight-color: #EF5552;
     --highlight-hover-color: #F56A67;
+
+    --card-radius: 15px;
+    --small-button-radius: 5px;
+    --medium-button-radius: 10px;
 }
 
 body, html {
