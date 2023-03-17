@@ -1,5 +1,6 @@
 
 function loadConfig(config) {
+    const container = document.getElementById("configs");
     const entry = document.createElement("div");
     entry.classList.add("config-file");
 
