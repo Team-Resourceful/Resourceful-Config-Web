@@ -1,9 +1,5 @@
 
 function loadConfig(config) {
-    const container = document.getElementById("configs");
-    container.classList.remove("loading");
-    container.innerHTML = "";
-
     const entry = document.createElement("div");
     entry.classList.add("config-file");
 
@@ -69,6 +65,9 @@ callConfigServer("configs", (error, response) => {
         return;
     }
     response.json().then((json) => {
+        const container = document.getElementById("configs");
+        container.classList.remove("loading");
+        container.innerHTML = "";
         json.forEach((config) => {
             loadConfig(config);
         });

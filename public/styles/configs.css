@@ -21,7 +21,7 @@ body {
 
     grid-template-columns: 1fr 1fr 1fr;
 
-    grid-template-rows: repeat(auto-fill, 200px);
+    grid-template-rows: repeat(auto-fill, 225px);
 
     grid-gap: 20px;
 
@@ -76,6 +76,10 @@ body {
     padding: 0;
     font-size: 1.5em;
     color: white;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .info > div > p {
@@ -86,6 +90,7 @@ body {
 
     text-overflow: ellipsis;
     overflow: hidden;
+    white-space: nowrap;
 }
 
 .heading {
