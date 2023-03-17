@@ -110,7 +110,7 @@ function callConfigServer(path, callback) {
     }).catch((error) => {
         const isSafari = window.safari !== undefined;
         if (isSafari) {
-            callback("An error occurred while connecting to the server, please try again later.<br>It may be that your browser is not supported.", null);
+            callback("An error occurred while connecting to the server, please try again later.\nIt may be that your browser is not supported.", null);
         } else {
             callback("An error occurred while connecting to the server, please try again later.", null);
         }
