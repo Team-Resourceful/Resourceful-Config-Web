@@ -27,3 +27,11 @@ p, span, li {
     margin-bottom: 20px;
     margin-top: 20px;
 }
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
