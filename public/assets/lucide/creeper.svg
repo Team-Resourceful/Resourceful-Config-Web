@@ -1,10 +1,10 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18 19L17 17" stroke="white" stroke-width="2" stroke-linecap="round"/>
-<path d="M10 19L11 17" stroke="white" stroke-width="2" stroke-linecap="round"/>
-<path d="M8 13C8 12.4477 8.44772 12 9 12H19C19.5523 12 20 12.4477 20 13V18H8V13Z" fill="white"/>
-<path d="M18 18H20V19C20 19.5523 19.5523 20 19 20H18V18Z" fill="white"/>
-<path d="M8 18H10V20H9C8.44772 20 8 19.5523 8 19V18Z" fill="white"/>
-<path d="M11 11C11 10.4477 11.4477 10 12 10H16C16.5523 10 17 10.4477 17 11V12H11V11Z" fill="white"/>
-<rect x="17" y="4" width="6" height="6" rx="1" fill="white"/>
-<rect x="5" y="4" width="6" height="6" rx="1" fill="white"/>
+    <path d="M16 19L15 17" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <path d="M8 19L9 17" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <path d="M6 13C6 12.4477 6.44772 12 7 12H17C17.5523 12 18 12.4477 18 13V18H6V13Z" fill="white"/>
+    <path d="M16 18H18V19C18 19.5523 17.5523 20 17 20H16V18Z" fill="white"/>
+    <path d="M6 18H8V20H7C6.44772 20 6 19.5523 6 19V18Z" fill="white"/>
+    <path d="M9 11C9 10.4477 9.44772 10 10 10H14C14.5523 10 15 10.4477 15 11V12H9V11Z" fill="white"/>
+    <rect x="15" y="4" width="6" height="6" rx="1" fill="white"/>
+    <rect x="3" y="4" width="6" height="6" rx="1" fill="white"/>
 </svg>
