@@ -73,12 +73,14 @@ body {
 .info > div {
     margin-left: 20px;
     padding-top: 10px;
+    width: 100%;
 }
 
 .info > div > h1 {
     margin: 0;
     padding: 0;
     font-size: 1.25em;
+    width: 100%;
     color: var(--text-title-color);
 
     text-overflow: ellipsis;
@@ -89,6 +91,8 @@ body {
     margin: 0;
     padding: 0;
     font-size: 0.8em;
+    width: 100%;
+    height: calc(100% - 2rem);
     color: var(--text-paragraph-color);
 
     text-overflow: ellipsis;
