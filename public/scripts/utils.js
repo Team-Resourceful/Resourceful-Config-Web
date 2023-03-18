@@ -3,6 +3,8 @@ const allowedIcons = new Set([
     "curseforge",
     "patreon",
     "planet",
+    "bee",
+    "honeycomb",
     "accessibility",
     "activity",
     "air-vent",
@@ -902,6 +904,8 @@ const iconAuthors = {
     "curseforge": iconAuthorGravy,
     "patreon": iconAuthorGravy,
     "planet": iconAuthorGravy,
+    "bee": iconAuthorGravy,
+    "honeycomb": iconAuthorGravy,
 }
 
 function getImgIconUrl(id) {
