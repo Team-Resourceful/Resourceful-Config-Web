@@ -12,6 +12,7 @@ for (let icon of allowedIcons) {
     const element = createImgIcon(icon, title);
     element.classList.add("icon");
     element.dataset.icon = icon;
+    element.title = title;
 
     let iconUrl = "https://lucide.dev";
     let iconAuthor = "lucide.dev";
