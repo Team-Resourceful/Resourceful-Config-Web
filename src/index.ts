@@ -2,7 +2,7 @@ import express from "express";
 import {Authentication} from "./utils/authentication";
 import {readdir} from "fs/promises";
 import {PrivateApiEndpoint, PublicApiEndpoint} from "./utils/types";
-import {Config} from "./utils/config";
+import { env } from "node:process";
 
 const app = express()
 
@@ -27,6 +27,6 @@ readdir("./dist/paths/private")
 
 app.get("/", (req,res) => res.sendFile(process.cwd() + "/public/index.html"));
 
-app.listen(Config.server.port)
+app.listen(env.PORT)
 
-console.log(`Listening on port: http://localhost:${Config.server.port}`)
+console.log(`Listening on port: http://localhost:${env.PORT}`)

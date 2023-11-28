@@ -2,7 +2,7 @@ import {MethodType, PublicApiEndpoint} from "../../utils/types";
 import {Request, Response} from "express";
 import {MsAuth} from "../../utils/msauth";
 import Jwt, {Algorithm} from "jsonwebtoken";
-import {Config} from "../../utils/config";
+import { env } from "node:process";
 
 export default {
     path: "mslogin",
@@ -22,9 +22,9 @@ export default {
                                         name: account.name,
                                         svr_pw: request.query.svr_pw
                                     },
-                                    Config.jwt.private,
+                                    env.JWT_SECRET as string,
                                     {
-                                        algorithm: Config.jwt.algo as Algorithm,
+                                        algorithm: env.JWT_ALGO as Algorithm,
                                         subject: uuid,
                                         expiresIn: "2h"
                                     }

@@ -1,12 +1,18 @@
 import {NextFunction, Request, Response} from "express";
 import {Database} from "./database";
 import {ApiUser} from "./types";
-import {Config} from "./config";
+import { env } from "node:process";
 import Jwt, {Algorithm, JwtPayload} from "jsonwebtoken";
 
 export class Authentication {
 
-    private static database: Database = new Database(Config.database);
+    private static database: Database = new Database({
+        host: env.DB_HOST,
+        database: env.DB_NAME,
+        password: env.DB_PASS,
+        port: parseInt(env.DB_PORT as string),
+        user: env.DB_USER
+    });
 
     public static revokeUser(request: Request): Promise<void> {
         return new Promise<void>((resolve, reject) => {
@@ -29,9 +35,9 @@ export class Authentication {
                 const code = authorization.split(" ")[1];
                 if (code) {
                     Jwt.verify(code,
-                        Config.jwt.public,
+                        env.JWT_SECRET as string,
                         {
-                            algorithms: [Config.jwt.algo as Algorithm]
+                            algorithms: [env.JWT_ALGO as Algorithm]
                         },
                         (err, decoded) => {
                             if (decoded) {

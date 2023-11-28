@@ -1,18 +1,14 @@
-import {Config} from "./config";
+import { env } from "node:process";
 import axios from "axios";
 
 export class MsAuth {
 
     public static async getAccount(code: string): Promise<MinecraftAccount> {
-        return MsAuth.getMicrosoftTokens(code)
-            .then(MsAuth.getXboxLiveToken)
-            .then(xbl =>
-                MsAuth.getXstsToken(xbl)
-                    .then(xsts =>
-                        MsAuth.getMinecraftToken(xbl, xsts)
-                            .then(MsAuth.getMinecraftAccount)
-                    )
-            )
+        const msToken = await MsAuth.getMicrosoftTokens(code);
+        const xbl = await MsAuth.getXboxLiveToken(msToken);
+        const xsts = await MsAuth.getXstsToken(xbl);
+        const mcAuth = await MsAuth.getMinecraftToken(xbl, xsts);
+        return MsAuth.getMinecraftAccount(mcAuth);
     }
 
     private static getMinecraftAccount(mcAuth: MinecraftAuthResponse): Promise<MinecraftAccount> {
@@ -36,11 +32,11 @@ export class MsAuth {
 
     private static getMicrosoftTokens(code: string): Promise<string> {
         const params = new URLSearchParams();
-        params.append("client_id", Config.microsoft.client);
-        params.append("client_secret", Config.microsoft.secret);
+        params.append("client_id", env.MS_CLIENT as string);
+        params.append("client_secret", env.MS_SECRET  as string);
         params.append("code", code);
         params.append("grant_type", "authorization_code");
-        params.append("redirect_uri", Config.microsoft.url);
+        params.append("redirect_uri", env.MS_URL as string);
 
         return new Promise<string>((resolve, reject) => {
             axios("https://login.live.com/oauth20_token.srf", {
