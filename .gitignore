@@ -1,6 +1,6 @@
+dist
 node_modules
+.npm
 /.env
 /.idea/
-dist
-
 config.json
