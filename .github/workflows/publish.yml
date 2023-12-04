@@ -13,8 +13,6 @@ jobs:
     steps:
       ### Checkout Repo
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       ### Setup Node
       - uses: actions/setup-node@v4
@@ -32,13 +30,21 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      ### Set Build Version
+      - name: Set Build Version
+        id: build-version
+        run:
+          echo "BUILD_VERSION=`date +%y%j%H%M`" >> "$GITHUB_OUTPUT"
+
       ### Extract Docker Metadata
       - name: Extract Docker Metadata
         id: meta
         uses: docker/metadata-action@v5
         with:
           images: ghcr.io/${{ github.repository }}
-          tags: latest
+          tags: |
+            ${{ steps.build-version.outputs.BUILD_VERSION }}
+            latest
 
       ### Build and Push Package
       - name: Build and Push
